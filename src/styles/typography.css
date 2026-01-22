@@ -1,0 +1,67 @@
+/* tipografia */
+
+/* FONTE 1 - guanabara */
+
+.font_1_xs {
+  font-family: "Guanabara Sans Test", sans-serif;
+  font-weight: 300;
+}
+
+.font_1_s {
+  font-family: "Guanabara Sans Test", sans-serif;
+  font-weight: 400;
+}
+
+.font_1_m {
+  font-family: "Guanabara Sans Test", sans-serif;
+  font-weight: 500;
+}
+
+.font_1_l {
+  font-family: "Guanabara Sans Test", sans-serif;
+  font-weight: 600;
+}
+
+/*FONTE 2 - ZT*/
+
+.font_2_xs {
+  font-family: "ZT talk", sans-serif;
+  font-weight: 300;
+}
+
+.font_2_s {
+  font-family: "ZT talk", sans-serif;
+  font-weight: 400;
+}
+
+.font_2_m {
+  font-family: "ZT talk", sans-serif;
+  font-weight: 500;
+}
+
+.font_2_l {
+  font-family: "ZT talk", sans-serif;
+  font-weight: 600;
+}
+
+/*FONTE 3 IBM*/
+
+.font_3_xs {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 300;
+}
+
+.font_3_s {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 400;
+}
+
+.font_3_m {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 500;
+}
+
+.font_3_l {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 600;
+}

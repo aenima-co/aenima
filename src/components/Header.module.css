@@ -1,0 +1,36 @@
+/*TOP BAR*/
+
+.header__topBar {
+  padding: 0.5rem 1rem;
+  background-color: var(--cor-0);
+  justify-items: center;
+}
+.header__topBarText {
+  font-size: 0.88rem;
+  margin: 0.31rem 0.5rem;
+}
+.header__topBarText a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*NAV BAR*/
+
+.header__nav {
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__menu {
+  position: relative;
+  display: flex;
+  gap: 4.5rem;
+}
+.header__menu-item {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+.header__menu-item a {
+  font-size: 1.25rem;
+}

@@ -1,0 +1,61 @@
+/* ESCOLHAS PADRÕES DOS BOTÕES */
+
+.btn__primary {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-size: 1.25rem;
+  padding: 0.6rem 0.72rem 0.6rem 2.23rem;
+  gap: 1rem;
+  border: none;
+  border-radius: 2.25rem;
+  cursor: pointer;
+  z-index: 1;
+  /*opção de personalizar cursor ?*/
+}
+
+.btn__primary * {
+  pointer-events: none; /* evita o bug de hover sumir */
+}
+
+.btn__primaryAnimation {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn__primary:hover .btn__primaryAnimation {
+  width: 200%;
+  height: 600%;
+  bottom: -70px;
+  left: -50px;
+}
+
+.btn__primary:hover .btn__primaryAnimation path {
+  fill: var(--cor-3);
+}
+
+/* ÍCONE DE FLECHA PARA CIMA */
+.arrow-icon {
+  border-radius: 2.25rem;
+  padding: 0.8rem;
+  transition: 0.5s;
+}
+
+/* PERSONALIZAÇÃO DE ITENS DO MENU NAVBAR */
+.menu-border {
+  /*escolha padrão*/
+  position: absolute;
+  border: solid 1px var(--cor-7);
+  width: 6.38rem;
+  height: 3.5rem;
+  border-radius: 3rem;
+  transition: all 0.3s ease;
+  background: none;
+  cursor: pointer;
+}
