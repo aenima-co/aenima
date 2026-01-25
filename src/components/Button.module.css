@@ -1,0 +1,83 @@
+.btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-size: 1.25rem;
+  padding: 0.6rem 0.72rem 0.6rem 2.23rem;
+  gap: 1rem;
+  border: none;
+  border-radius: 2.25rem;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.arrowWrapper {
+  border-radius: 2.25rem;
+  padding: 0.9rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.arrowIcon {
+  width: 0.5rem;
+  height: 0.5rem;
+  transition: fill 0.7s ease;
+}
+
+.dark {
+  background: #000;
+  color: #fff;
+}
+
+.dark .arrowWrapper {
+  background: #e53935;
+}
+
+.dark .arrowIcon {
+  fill: #fff;
+}
+
+.dark:hover {
+  background: #e53935;
+}
+
+.dark:hover .arrowWrapper {
+  background: #fff;
+}
+
+.dark:hover .arrowIcon {
+  color: #000;
+  z-index: 2;
+}
+
+.light {
+  background: #fff;
+  color: #000;
+}
+
+.light .arrowWrapper {
+  background: #e53935;
+}
+
+.light .arrowIcon {
+  fill: #fff;
+}
+
+.light:hover {
+  background: #e53935;
+  color: #fff;
+}
+
+.light:hover .arrowWrapper {
+  background: #fff;
+}
+
+.light:hover .arrowIcon {
+  fill: #000;
+}

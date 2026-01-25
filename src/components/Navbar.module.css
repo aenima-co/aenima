@@ -1,0 +1,30 @@
+.nav {
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu {
+  position: relative;
+  display: flex;
+  gap: 4.5rem;
+}
+.menuItem {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+.menuItem a {
+  font-size: 1.25rem;
+}
+
+.indicator {
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 999px;
+  transition:
+    left 0.3s ease,
+    top 0.3s ease,
+    width 0.3s ease,
+    height 0.3s ease;
+  pointer-events: none; /* não bloqueia o mouse */
+}
