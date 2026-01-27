@@ -24,30 +24,30 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`${styles.nav} container`}>
-      <a href="/.">
-        <img src="../src/assets/logo.png" alt="Aenima Logo" />
-      </a>
-
-      <ul className={styles.menu}>
-        {["Home", "Work", "About", "Blog"].map((item, index) => (
-          <li
-            key={item}
-            ref={(el) => (itemsRef.current[index] = el)}
-            className={styles.menuItem}
-            onMouseEnter={() => moveIndicator(index)}
-            onClick={() => setActiveIndex(index)}
-          >
-            <a className="font_1_m" href="#">
-              {item}
-            </a>
-          </li>
-        ))}
-
-        <span ref={indicatorRef} className={styles.indicator} />
-      </ul>
-      <Button nome={"Contact us"} variant={"dark"} />
-    </nav>
+    <>
+      <nav className={styles.nav}>
+        <a href="/.">
+          <img src="../src/assets/logo.png" alt="Aenima Logo" />
+        </a>
+        <ul className={styles.menu}>
+          {["Home", "Work", "About", "Blog"].map((item, index) => (
+            <li
+              key={item}
+              ref={(el) => (itemsRef.current[index] = el)}
+              className={styles.menuItem}
+              onMouseEnter={() => moveIndicator(index)}
+              onClick={() => setActiveIndex(index)}
+            >
+              <a className="font_1_m" href="#">
+                {item}
+              </a>
+            </li>
+          ))}
+          <span ref={indicatorRef} className={styles.indicator} />
+        </ul>
+        <Button nome={"Contact us"} variant={"dark"} />
+      </nav>
+    </>
   );
 };
 

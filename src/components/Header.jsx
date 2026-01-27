@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import Navbar from "./Navbar.jsx";
+import NavMobile from "./NavMobile.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import useMedia from "./useMedia";
 
 const Header = () => {
+  const mobile = useMedia("(max-width: 58rem)");
+  const [mobileMenu, setMobileMenu] = React.useState(false);
+
+  useEffect(() => {
+    setMobileMenu(mobile);
+    console.log(mobileMenu);
+  }, [mobile]);
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} container`}>
       <div className={styles.header__topBar}>
         <h4 className={`${styles.header__topBarText} font_1_xs cor_1`}>
           <FontAwesomeIcon
@@ -24,7 +34,7 @@ const Header = () => {
           />
         </h4>
       </div>
-      <Navbar />
+      {!mobileMenu ? <Navbar /> : <NavMobile />}
     </header>
   );
 };

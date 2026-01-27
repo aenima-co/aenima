@@ -28,3 +28,19 @@
     height 0.3s ease;
   pointer-events: none; /* não bloqueia o mouse */
 }
+
+@media (max-width: 1060px) {
+  .nav {
+    padding: 1rem 3rem;
+  }
+
+  .menu {
+    gap: 3rem;
+  }
+  .menuItem {
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+}

@@ -31,53 +31,53 @@
 }
 
 .dark {
-  background: #000;
-  color: #fff;
+  background: var(--cor-2);
+  color: var(--cor-1);
 }
 
 .dark .arrowWrapper {
-  background: #e53935;
+  background: var(--cor-3);
 }
 
 .dark .arrowIcon {
-  fill: #fff;
+  fill: var(--cor-1);
 }
 
 .dark:hover {
-  background: #e53935;
+  background: var(--cor-3);
 }
 
 .dark:hover .arrowWrapper {
-  background: #fff;
+  background: var(--cor-1);
 }
 
 .dark:hover .arrowIcon {
-  color: #000;
+  color: var(--cor-2);
   z-index: 2;
 }
 
 .light {
-  background: #fff;
-  color: #000;
+  background: var(--cor-1);
+  color: var(--cor-2);
 }
 
 .light .arrowWrapper {
-  background: #e53935;
+  background: var(--cor-3);
 }
 
 .light .arrowIcon {
-  fill: #fff;
+  fill: var(--cor-1);
 }
 
 .light:hover {
-  background: #e53935;
-  color: #fff;
+  background: var(--cor-3);
+  color: var(--cor-1);
 }
 
 .light:hover .arrowWrapper {
-  background: #fff;
+  background: var(--cor-1);
 }
 
 .light:hover .arrowIcon {
-  fill: #000;
+  fill: var(--cor-2);
 }

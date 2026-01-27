@@ -1,0 +1,34 @@
+.mobileButton {
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s;
+  border: none;
+  cursor: pointer;
+}
+
+.primaryButton {
+  background-color: var(--cor-3);
+}
+
+.primaryButton:after {
+  content: "";
+  display: block;
+  width: 1.2rem;
+  height: 0.18rem;
+  border-radius: 0.2rem;
+  background-color: var(--cor-1);
+  box-shadow:
+    0 0.4rem var(--cor-1),
+    0 -0.4rem var(--cor-1);
+}
+
+.navMobile {
+  padding: 1.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
