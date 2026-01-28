@@ -8,8 +8,20 @@ const Navbar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
+    const handleResize = () => {
+      moveIndicator(activeIndex);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [activeIndex]);
+
+  useEffect(() => {
     moveIndicator(activeIndex);
-  }, []);
+  }, [activeIndex]);
 
   const moveIndicator = (index) => {
     const item = itemsRef.current[index];

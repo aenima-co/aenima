@@ -8,12 +8,6 @@ import useMedia from "./useMedia";
 
 const Header = () => {
   const mobile = useMedia("(max-width: 58rem)");
-  const [mobileMenu, setMobileMenu] = React.useState(false);
-
-  useEffect(() => {
-    setMobileMenu(mobile);
-    console.log(mobileMenu);
-  }, [mobile]);
 
   return (
     <header className={`${styles.header} container`}>
@@ -34,7 +28,7 @@ const Header = () => {
           />
         </h4>
       </div>
-      {!mobileMenu ? <Navbar /> : <NavMobile />}
+      {!mobile ? <Navbar /> : <NavMobile />}
     </header>
   );
 };
