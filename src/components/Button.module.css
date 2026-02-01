@@ -82,3 +82,15 @@
 .light:hover .arrowIcon {
   stroke: var(--cor-2);
 }
+
+.dropdown {
+  border: 1px solid #000;
+  width: "95%";
+  margin-top: "1rem";
+  font-size: "1.5rem";
+  padding: "1rem";
+}
+
+.dropdown:hover {
+  border-color: transparent;
+}

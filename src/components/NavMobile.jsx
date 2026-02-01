@@ -32,16 +32,7 @@ const NavMobile = () => {
               </a>
             </li>
           ))}
-          <Button
-            style={{
-              width: "95%",
-              marginTop: "1rem",
-              fontSize: "1.5rem",
-              padding: "1rem",
-            }}
-            nome={"Contact us"}
-            variant={"light"}
-          />
+          <Button nome={"Contact us"} variant={["light", "dropdown"]} />
         </ul>
       ) : (
         <></>
