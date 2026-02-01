@@ -1,13 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import styles from "./NavMobile.module.css";
+import Button from "./Button";
 
 const NavMobile = () => {
   const [active, setActive] = React.useState(false);
-
-  function handleClick() {
-    setActive((active) => !active);
-  }
+  const [menuFocus, setMenuFocus] = React.useState(0);
 
   return (
     <nav className={styles.navMobile}>
@@ -16,14 +14,38 @@ const NavMobile = () => {
         <img src="../src/assets/logo.png" alt="Aenima Logo" />
       </a>
       <button
-        onClick={handleClick}
-        className={
-          active
-            ? `${styles.mobileButton} ${styles.activeButton}`
-            : `${styles.mobileButton} ${styles.primaryButton}`
-        }
+        onClick={() => setActive(!active)}
+        className={`${styles.mobileButton} ${
+          active ? styles.activeButton : styles.primaryButton
+        }`}
       ></button>
-      {}
+      {active ? (
+        <ul className={`${styles.dropDown} font_1_m`}>
+          {["Home", "Work", "About", "Blog"].map((item, index) => (
+            <li
+              key={item}
+              className={`${styles.menu} ${menuFocus === index ? styles.activeMenu : styles.inactiveMenu}`}
+              onMouseOver={() => setMenuFocus(index)}
+            >
+              <a className="font_1_m" href="#">
+                {item}
+              </a>
+            </li>
+          ))}
+          <Button
+            style={{
+              width: "95%",
+              marginTop: "1rem",
+              fontSize: "1.5rem",
+              padding: "1rem",
+            }}
+            nome={"Contact us"}
+            variant={"light"}
+          />
+        </ul>
+      ) : (
+        <></>
+      )}
     </nav>
   );
 };
