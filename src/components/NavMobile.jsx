@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import styles from "./NavMobile.module.css";
 import Button from "./Button";
+import logo from "../assets/logo.png";
 
 const NavMobile = () => {
   const [active, setActive] = React.useState(false);
@@ -11,7 +12,7 @@ const NavMobile = () => {
     <nav className={styles.navMobile}>
       {" "}
       <a href="/." onClick={(e) => e.preventDefault()}>
-        <img src="../src/assets/logo.png" alt="Aenima Logo" />
+        <img src={logo} alt="Aenima Logo" />
       </a>
       <button
         onClick={() => setActive(!active)}
