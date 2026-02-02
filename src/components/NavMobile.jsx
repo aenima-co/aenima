@@ -20,24 +20,21 @@ const NavMobile = () => {
           active ? styles.activeButton : styles.primaryButton
         }`}
       ></button>
-      {active ? (
-        <ul className={`${styles.dropDown} font_1_m`}>
-          {["Home", "Work", "About", "Blog"].map((item, index) => (
-            <li
-              key={item}
-              className={`${styles.menu} ${menuFocus === index ? styles.activeMenu : styles.inactiveMenu}`}
-              onMouseOver={() => setMenuFocus(index)}
-            >
-              <a className="font_1_m" href="#">
-                {item}
-              </a>
-            </li>
-          ))}
-          <Button nome={"Contact us"} variant={["light", "dropdown"]} />
-        </ul>
-      ) : (
-        <></>
-      )}
+      <ul className={`${styles.dropDown} ${active ? styles.open : ""}`}>
+        {["Home", "Work", "About", "Blog"].map((item, index) => (
+          <li
+            key={item}
+            className={`${styles.menu} ${menuFocus === index ? styles.activeMenu : styles.inactiveMenu}`}
+            onMouseOver={() => setMenuFocus(index)}
+          >
+            <a className="font_1_m" href="#">
+              {item}
+            </a>
+          </li>
+        ))}
+        <Button nome="Contact us" variant="dropdown" />
+      </ul>
+      <></>
     </nav>
   );
 };

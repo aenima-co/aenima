@@ -7,7 +7,7 @@
   font-size: 1.25rem;
   padding: 0.6rem 0.72rem 0.6rem 2.23rem;
   gap: 1rem;
-  border: none;
+  border-color: transparent;
   border-radius: 2.25rem;
   cursor: pointer;
   transition:
@@ -56,41 +56,43 @@
   z-index: 2;
 }
 
-.light {
+.dropdown {
+  border: 1px solid #000;
+  width: 95%;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.light,
+.dropdown {
   background: var(--cor-1);
   color: var(--cor-2);
 }
 
-.light .arrowWrapper {
+.light .arrowWrapper,
+.dropdown .arrowWrapper {
   background: var(--cor-3);
 }
 
-.light .arrowIcon {
+.light .arrowIcon,
+.dropdown .arrowIcon {
   stroke: var(--cor-1);
 }
 
-.light:hover {
+.light:hover,
+.dropdown:hover {
   background: var(--cor-3);
   color: var(--cor-1);
-  border-color: none;
+  border-color: transparent;
 }
 
-.light:hover .arrowWrapper {
+.light:hover .arrowWrapper,
+.dropdown:hover .arrowWrapper {
   background: var(--cor-1);
 }
 
-.light:hover .arrowIcon {
+.light:hover .arrowIcon,
+.dropdown:hover .arrowIcon {
   stroke: var(--cor-2);
-}
-
-.dropdown {
-  border: 1px solid #000;
-  width: "95%";
-  margin-top: "1rem";
-  font-size: "1.5rem";
-  padding: "1rem";
-}
-
-.dropdown:hover {
-  border-color: transparent;
 }
