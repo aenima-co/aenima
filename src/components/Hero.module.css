@@ -1,0 +1,132 @@
+.heroBg {
+  background-image: url("../assets/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 1rem 2.5rem;
+  min-height: 90vh;
+  border-radius: 4rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.teamWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.team {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #000; /* separação visual */
+}
+
+/* Faz a sobreposição */
+.team + .team {
+  margin-left: -1.2rem;
+}
+
+.team img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team {
+  position: relative;
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    z-index 0.2s;
+}
+
+.team:hover {
+  transform: scale(1.08) translateX(-2px);
+  z-index: 10;
+}
+
+.team:nth-child(1) {
+  z-index: 1;
+}
+
+.team:nth-child(2) {
+  z-index: 2;
+}
+
+.team:nth-child(3) {
+  z-index: 3;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
+}
+
+.contentParagraph p {
+  font-size: 1.13rem;
+  color: #f5f3f5bf;
+  letter-spacing: 0.06rem;
+  max-width: 40ch;
+  line-height: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.contentText {
+  color: var(--cor-6);
+  display: flex;
+  justify-content: space-between;
+}
+
+.contentText h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+  transform: scaleY(1.3);
+  line-height: 0.9;
+  margin: 2rem 0;
+}
+
+@media (max-width: 42rem) {
+  .heroBg {
+    background-image: url("../assets/heroMobile.png");
+    padding: 3rem 2rem;
+    gap: 3rem;
+    margin: 1rem 0.1rem;
+    height: 85vh;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .contentParagraph {
+    margin-bottom: 2rem;
+  }
+  .contentParagraph p {
+    font-size: 1.13rem;
+    max-width: 32ch;
+    line-height: 1.5;
+    padding-bottom: 1rem;
+  }
+  .contentText {
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  .contentText h1 {
+    font-size: 5.5rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+@media (max-width: 28rem) {
+  .contentParagraph p {
+    font-size: 1.05rem;
+    max-width: 32ch;
+  }
+  .contentText h1 {
+    font-size: 4.8rem;
+  }
+}

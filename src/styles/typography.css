@@ -1,31 +1,53 @@
-/* tipografia */
+/* ===========================
+   IMPORTS DE FONTES
+=========================== */
 
-/* FONTE 1 - guanabara */
+/* Google Fonts */
+@import url("https://p.typekit.net/p.css?s=1&k=bas8dzz&ht=tk&f=35943.35944.35945.35946.35953.35954.54543.54551.54553.59172.59173&a=40372224&app=typekit&e=css");
+/* Adobe Fonts
+   - Guanabara Sans
+   - ZT Talk
+   - Argent Pixel CF
+*/
+
+@font-face {
+  font-family: "ZT Talk";
+  src: url("../assets/fonts/ZTTalk-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===========================
+   FONTE 1 — GUANABARA SANS
+=========================== */
 
 .font_1_xs {
-  font-family: "Guanabara Sans Test", sans-serif;
+  font-family: "guanabara-sans", sans-serif;
   font-weight: 300;
 }
 
 .font_1_s {
-  font-family: "Guanabara Sans Test", sans-serif;
+  font-family: "guanabara-sans", sans-serif;
   font-weight: 400;
 }
 
 .font_1_m {
-  font-family: "Guanabara Sans Test", sans-serif;
+  font-family: "guanabara-sans", sans-serif;
   font-weight: 500;
 }
 
 .font_1_l {
-  font-family: "Guanabara Sans Test", sans-serif;
+  font-family: "guanabara-sans", sans-serif;
   font-weight: 600;
 }
 
-/*FONTE 2 - ZT*/
+/* ===========================
+   FONTE 2 — ZT TALK
+=========================== */
 
 .font_2_xs {
-  font-family: "ZT talk", sans-serif;
+  font-family: "ZT Talk", sans-serif;
   font-weight: 300;
 }
 
@@ -33,35 +55,79 @@
   font-family: "ZT talk", sans-serif;
   font-weight: 400;
 }
-
 .font_2_m {
   font-family: "ZT talk", sans-serif;
   font-weight: 500;
 }
-
 .font_2_l {
   font-family: "ZT talk", sans-serif;
   font-weight: 600;
 }
-
-/*FONTE 3 IBM*/
+/* ===========================
+   FONTE 3 — IBM PLEX MONO
+=========================== */
 
 .font_3_xs {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 300;
 }
 
 .font_3_s {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
 }
 
 .font_3_m {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
 }
 
 .font_3_l {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+}
+
+.font_4_xs {
+  font-family: "chivo-mono", monospace;
+  font-weight: 300;
+}
+.font_4_s {
+  font-family: "chivo-mono", monospace;
+  font-weight: 400;
+}
+.font_4_m {
+  font-family: "chivo-mono", monospace;
+  font-weight: 500;
+}
+.font_4_l {
+  font-family: "chivo-mono", monospace;
+  font-weight: 600;
+}
+
+/* ===========================
+   FONTE 5 — ARGENT PIXEL CF
+   (peso único: 400)
+=========================== */
+
+.font_5_xs,
+.font_5_s,
+.font_5_m,
+.font_5_l {
+  font-family: "argent-pixel-cf", monospace;
+
+  /* melhora o visual pixel */
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+}
+.font_5_xs {
+  font-weight: 300;
+}
+.font_5_s {
+  font-weight: 400;
+}
+.font_5_m {
+  font-weight: 500;
+}
+.font_5_l {
   font-weight: 600;
 }
