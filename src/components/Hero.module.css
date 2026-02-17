@@ -3,10 +3,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 1rem 2.5rem;
+  margin: 1rem 2.2rem;
   min-height: 90vh;
-  border-radius: 4rem;
-  padding: 4rem;
+  border-radius: 2.5rem;
+  padding: 3rem 4rem 4rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,11 +15,17 @@
 .teamWrapper {
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.teamWrapper span {
+  color: #f5f3f5bf;
+  margin-left: 1rem;
 }
 
 .team {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid #000; /* separação visual */
@@ -72,7 +78,7 @@
   color: #f5f3f5bf;
   letter-spacing: 0.06rem;
   max-width: 40ch;
-  line-height: 1.3rem;
+  line-height: 1.7rem;
   margin-bottom: 1rem;
 }
 
@@ -90,16 +96,17 @@
   margin: 2rem 0;
 }
 
-@media (max-width: 42rem) {
+@media (max-width: 54rem) {
   .heroBg {
     background-image: url("../assets/heroMobile.png");
-    padding: 3rem 2rem;
+    padding: 2rem 1.5rem 4rem 1.5rem;
     gap: 3rem;
     margin: 1rem 0.1rem;
-    height: 85vh;
+    height: 40rem;
   }
   .content {
     flex-direction: column;
+    gap: 1.5rem;
   }
   .contentParagraph {
     margin-bottom: 2rem;
@@ -110,11 +117,12 @@
     line-height: 1.5;
     padding-bottom: 1rem;
   }
+
   .contentText {
     flex-direction: column;
     gap: 3rem;
-    margin-top: 2rem;
   }
+
   .contentText h1 {
     font-size: 5.5rem;
     letter-spacing: 0.1rem;
@@ -127,6 +135,11 @@
     max-width: 32ch;
   }
   .contentText h1 {
-    font-size: 4.8rem;
+    font-size: 5.2rem;
+    word-spacing: 0.5rem;
+  }
+
+  .heroBg {
+    margin: 1rem 0rem;
   }
 }

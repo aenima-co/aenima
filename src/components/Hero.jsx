@@ -5,22 +5,83 @@ import bruna from "../assets/bruna.png";
 import rafa from "../assets/rafa.png";
 import Button from "./Button";
 import useMedia from "./useMedia";
+import Tooltip from "./Tooltip";
 
 const Hero = () => {
-  const mobile = useMedia("(max-width: 42rem)");
+  const team = [
+    {
+      id: 1,
+      name: "Ana Nogueira",
+      role: "WEB DEVELOPER",
+      image: ana,
+    },
+    {
+      id: 2,
+      name: "Bruna Heleodoro",
+      role: "QA ANALYST",
+      image: bruna,
+    },
+    {
+      id: 3,
+      name: "Rafael Meurer",
+      role: "UI & UX DESIGNER",
+      image: rafa,
+    },
+  ];
 
+  const mobile = useMedia("(max-width: 54rem)");
+  const [tooltip, setTooltip] = React.useState(null);
+
+  function showTooltip(event, member) {
+    const rect = event.currentTarget.getBoundingClientRect();
+
+    setTooltip({
+      ...member,
+      top: rect.height,
+      left: rect.left + rect.width / 2,
+    });
+  }
+
+  function hideTooltip() {
+    setTooltip(null);
+  }
+
+  function toggleTooltip(event, member) {
+    const rect = event.currentTarget.getBoundingClientRect();
+
+    setTooltip((prev) =>
+      prev?.id === member.id
+        ? null
+        : {
+            ...member,
+            top: rect.height,
+            left: rect.left + rect.width / 2,
+          },
+    );
+  }
   return (
     <div className={`${styles.heroBg}`}>
       <ul className={styles.teamWrapper}>
-        <li className={`${styles.team}`}>
-          <img src={ana} alt="Team picture" />
-        </li>
-        <li className={styles.team}>
-          <img src={bruna} alt="Team picture" />
-        </li>
-        <li className={styles.team}>
-          <img src={rafa} alt="Team picture" />
-        </li>
+        {team.map((member) => (
+          <li
+            key={member.id}
+            className={styles.team}
+            onMouseEnter={(e) => showTooltip(e, member)}
+            onMouseLeave={hideTooltip}
+            onClick={(e) => toggleTooltip(e, member)}
+          >
+            <img src={member.image} alt={member.name} />
+          </li>
+        ))}
+
+        {tooltip && (
+          <Tooltip
+            name={tooltip.name}
+            description={tooltip.role}
+            top={tooltip.top}
+            left={tooltip.left}
+          />
+        )}
       </ul>
       <div className={styles.content}>
         <div className={styles.contentParagraph}>
