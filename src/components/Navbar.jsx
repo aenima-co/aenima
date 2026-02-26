@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import Button from "./Button";
-import logo from "../assets/logo.png";
+import Logo from "../assets/logo.svg?react";
 
 const Navbar = () => {
   const indicatorRef = useRef(null);
@@ -39,8 +39,8 @@ const Navbar = () => {
   return (
     <>
       <nav className={styles.nav}>
-        <a href="/.">
-          <img src={logo} alt="Aenima Logo" />
+        <a href="/">
+          <Logo className={styles.logo} />
         </a>
         <ul className={styles.menu}>
           {["Home", "Work", "About", "Blog"].map((item, index) => (

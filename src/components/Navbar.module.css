@@ -7,7 +7,7 @@
 .menu {
   position: relative;
   display: flex;
-  gap: 4.5rem;
+  gap: 6rem;
 }
 .menuItem {
   padding: 1rem 1.5rem;
@@ -17,13 +17,17 @@
   font-size: 1.25rem;
 }
 
-.nav a img {
+.logo {
   width: 100%;
 }
 
+.logo:hover rect {
+  fill: var(--cor-8);
+  transition: 0.5s;
+}
 .indicator {
   position: absolute;
-  border: 2px solid #000;
+  border: 2px solid var(--cor-7);
   border-radius: 999px;
   transition:
     left 0.3s ease,
@@ -33,7 +37,19 @@
   pointer-events: none; /* não bloqueia o mouse */
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 105rem) {
+  .logo {
+    width: 90%;
+  }
+  .menu {
+    gap: 5rem;
+  }
+  .menuItem a {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 66.25rem) {
   .nav {
     padding: 1rem 3rem;
   }

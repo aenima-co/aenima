@@ -73,6 +73,7 @@ const Hero = () => {
             <img src={member.image} alt={member.name} />
           </li>
         ))}
+        <span className="font_1_m">Talk to our experts</span>
 
         {tooltip && (
           <Tooltip

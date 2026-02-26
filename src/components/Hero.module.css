@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 1rem 2.2rem;
+  margin: 0 2.25rem;
   min-height: 90vh;
   border-radius: 2.5rem;
   padding: 3rem 4rem 4rem 4rem;
@@ -69,17 +69,15 @@
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 50vh;
+  gap: 4rem;
 }
 
 .contentParagraph p {
-  font-size: 1.13rem;
+  font-size: 1.25rem;
   color: #f5f3f5bf;
   letter-spacing: 0.06rem;
   max-width: 40ch;
-  line-height: 1.7rem;
-  margin-bottom: 1rem;
+  line-height: 150%;
 }
 
 .contentText {
@@ -89,11 +87,20 @@
 }
 
 .contentText h1 {
-  font-size: 6rem;
+  font-size: 8rem;
   text-transform: uppercase;
-  transform: scaleY(1.3);
+  letter-spacing: -2px;
   line-height: 0.9;
-  margin: 2rem 0;
+}
+
+@media (max-width: 105rem) {
+  .contentParagraph p {
+    font-size: 1rem;
+  }
+
+  .contentText h1 {
+    font-size: 6rem;
+  }
 }
 
 @media (max-width: 54rem) {

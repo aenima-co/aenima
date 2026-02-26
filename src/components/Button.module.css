@@ -5,7 +5,9 @@
   position: relative;
   overflow: hidden;
   font-size: 1.25rem;
-  padding: 0.6rem 0.72rem 0.6rem 2.23rem;
+  min-width: 13rem;
+  height: 4rem;
+  padding: 0.625rem 0.75rem 0.625rem 2rem;
   gap: 1rem;
   border-color: transparent;
   border-radius: 2.25rem;
@@ -17,7 +19,7 @@
 
 .arrowWrapper {
   border-radius: 2.25rem;
-  padding: 0.9rem;
+  padding: 1.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,8 +27,8 @@
 }
 
 .arrowIcon {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.625rem;
+  height: 0.625rem;
   transition: stroke 0.7s ease;
 }
 
@@ -95,4 +97,16 @@
 .light:hover .arrowIcon,
 .dropdown:hover .arrowIcon {
   stroke: var(--cor-2);
+}
+
+@media (max-width: 105rem) {
+  .btn {
+    font-size: 1rem;
+    min-width: 12rem;
+    height: 3.5rem;
+    padding: 0.6rem 0.7rem 0.6rem 2rem;
+  }
+  .arrowWrapper {
+    padding: 0.875rem;
+  }
 }

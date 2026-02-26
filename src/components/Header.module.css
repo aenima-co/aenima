@@ -1,7 +1,7 @@
 /*TOP BAR*/
 
 .header__topBar {
-  padding: 0.5rem 1rem;
+  padding: 0.875rem 0.75rem;
   background-color: var(--cor-0);
   justify-items: center;
 }
@@ -10,7 +10,8 @@
   margin: 0.31rem 0.5rem;
   text-align: center;
 }
-.header__topBarText a {
+.header__topBarText span {
   text-decoration: underline;
+
   cursor: pointer;
 }
